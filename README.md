@@ -1,7 +1,156 @@
 # Sustainability extension
 
-Adds a sustainability array and a hasSustainability field to the tender and lot levels to identify if this process is related to Sustainable Public Procurement (SPP).
+Adds a `sustainability` array and a `hasSustainability` field to the tender and lot levels to identify if this process is related to Sustainable Public Procurement (SPP).
+
+Each `sustainability` array entry has `goal` and `strategies` fields. The strategies field accepts an array of codes from the closed `sustainabilityStrategy` codelist, to indicate which strategies are used to achieve the goal. The `goal` field accepts a code from the open `sustainabilityGoal` codelist, to indicate which sustainability goal the process/lot is related to.
+
+This extension uses the SPP definition from [UNEP](https://wedocs.unep.org/bitstream/handle/20.500.11822/37045/SPPWSG.pdf): “a process whereby public sector organizations meet their needs for goods, services, works and utilities in a way that achieves value for money on a whole life basis in terms of generating benefits not only to the organization, but also to society and the economy, whilst minimizing, and if possible, avoiding, damage to the environment.”
+
+## Motivation
+
+To calculate SPP indicators, a user or an application needs to be able to perform the following tasks, using OCDS data:
+- Select the contracting processes or individual lots that relate to SPP.
+- Select the contracting processes or individual lots that relate to a specific sustainability goal.
+- Determine which strategies are being used to promote a sustainability goal, within a contracting process or lot.
+- Determine whether a procured item or a supplier has characteristics related to sustainability.
+
+This extension add the fields needed for the above tasks as structured data.
+
+## Codelists
+The `sustainabilityGoal.csv` codelist is based on the list and definition used by the [OpenSPP toolkit](https://openspp.super.site/what-is-spp-and-open-spp) and the [EU’s strategic procurement codelist](https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/strategic-procurement).
+
+The `sustainabilityStrategy.csv` codelist is based on the strategies mentioned by the [OpenSPP toolkit](https://openspp.super.site/implement/set-sustainable-criteria) and the [EU’s strategic procurement codelist](https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/strategic-procurement) definition.
+
+## Guidance
+
+If you know a process or lot is SPP related, set `hasSustainability` to `true`. 
+
+If you know the sustainability goals this process is pursuing, then, for each goal, add an entry in the `sustainability` array for the tender or lot, using the `sustainabilityGoal` codelist.  The `sustainabilityGoal` codelist contains codes for broad goals ('environmental', 'social', 'innovation', 'economic') and narrower goals (like 'environmental.wasteReduction'). It is an [open codelist](https://standard.open-contracting.org/latest/en/schema/codelists/), such that you can add new codes if no existing code is appropriate.
+
+If you also know the strategies this process will use for achieving each goal, for each goal, add an entry in the `strategies` array using the `sustainabilityStrategies` codelist.
+
+## Examples
+
+### `hasSustainability` only
+
+Public Health Wales adopts SPP in a contracting process to design office space and supply furniture.
+
+```json
+{
+  "tender": {
+    "id": "P427",
+    "title": "Design of office space and supply of furniture, reusing existing furniture",
+    "hasSustainability": true,
+  }
+}
+```
+
+If the contracting process is divided into lots, and it is known which lots relate to SPP, set the hasSustainability field to true at the lot level
+
+```json
+{
+  "tender": {
+    "lots": [
+      {
+        "id": "123",
+        "hasSustainability": true
+      }
+    ]
+  }
+}
+```
+
+### The goal is known
+
+Public Health Wales intends to reduce waste and CO2 emissions as part of a contracting process to design office space and supply furniture.
+
+```json
+{
+  "tender": {
+    "sustainability": [
+      {
+        "goal": "environmental.wasteReduction"
+      },
+      {
+        "goal": "environmental.carbonEmissionsReduction"
+      }
+    ]
+  }
+}
+```
+
+If only the broad goal is known, create a single entry using the broad code
+
+```json
+{
+  "tender": {
+    "sustainability": [
+      {
+        "goal": "environmental"
+      }
+    ]
+  }
+}
+```
+
+If the sustainabilityGoal codelist contains no appropriate code, create your own code. To create a narrower code, add a period to an existing code, followed by a camelCase word
+
+```json
+{
+  "tender": {
+    "sustainability": [
+      {
+        "goal": "environmental.CFCReduction"
+      }
+    ]
+  }
+}
+```
+
+### The strategy is known
+
+Public Health Wales includes sustainability items requirements as part of a contracting process to design office space and supply furniture.
+
+```json
+{
+  "tender": {
+    "sustainability": [
+      {
+        "goal": "environmental.wasteReduction",
+        "strategies": [
+          "technicalSpecifications"
+        ]
+      },
+      {
+        "goal": "environmental.CO2Reduction",
+        "strategies": [
+          "technicalSpecifications"
+        ]
+      }
+    ]
+  }
+}
+```
+
+If the goal is unknown or is sustainability in general, omit goal and set strategies only
+
+```json
+{
+  "tender": {
+    "sustainability": [
+      {
+        "strategies": [
+          "technicalSpecifications"
+        ]
+      }
+    ]
+  }
+}
+```
+
 
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
+
+This extension was originally discussed in https://github.com/open-contracting/standard/issues/1543

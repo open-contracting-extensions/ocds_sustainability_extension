@@ -1,16 +1,16 @@
 Code,Title,Description
 economic,Economic,"The goal is related to economic promotion, such as formal employment and local economy."
-economic.formalEmployment,Economic,The goal is to promote formal employment.
-economic.localEconomy,Economic,The goal is to promote local economy.
+economic.formalEmploymentPromotion,Economic formal employment promotion,The goal is to promote formal employment.
+economic.localEconomyPromotion,Economic local economy promotion,The goal is to promote local economy.
 environmental,Environmental,"The goal is related to minimizing and, if possible, avoiding environmental damage, for example, reducing CO2 emissions and waste or promoting resource reuse and energy efficiency."
-environmental.CFCReduction,Environmental,The goal is to reduce Chlorofluorocarbons (CFC) (greenhouse) emissions.
-environmental.CO2Reduction,Environmental,The goal is to reduce Carbon Dioxide (CO2) emissions.
-environmental.energyEfficiency,Environmental,The goal is to promote energy efficiency.
-environmental.recycling,Environmental,The goal is to promote recycling.
-environmental.resourceReuse,Environmental,The goal is to maximize the reuse of resources.
-environmental.wasteReduction,Environmental,The goal is to reduce waste.
+environmental.greenHouseEmissionsReduction,Environmental green house emissions reduction,The goal is to reduce Chlorofluorocarbons (CFC) (greenhouse) emissions.
+environmental.carbonEmissionsReduction,Environmental carbon emissions reduction,The goal is to reduce Carbon Dioxide (CO2) emissions.
+environmental.energyEfficiency,Environmental energy efficiency,The goal is to promote energy efficiency.
+environmental.recycling,Environmental recycling,The goal is to promote recycling.
+environmental.resourceReuse,Environmental resource reuse,The goal is to maximize the reuse of resources.
+environmental.wasteReduction,Environmental waste reduction,The goal is to reduce waste.
 innovation,Innovation,The goal is related to promoting innovation to achieve economic growth or efficient resources use.
 social,Social,"The goal is related to generating benefits for society, such as ensuring labor rights, promoting diversity and equal opportunities, and occupational health and safety."
-social.laborRightsPromotion,Social,"The goal is to promote labor rights."
-social.SMEsInclusion,Social,"The goal is to promote Small and Medium-sized enterprises (SMEs) participation."
-social.womanInclusion,Social,"The goal is to promote women-owned suppliers' participation."
+social.laborRightsPromotion,Social labor rights promotion,The goal is to promote labor rights.
+social.smesInclusion,Social SMEs inclusion,The goal is to promote Small and Medium-sized enterprises (SMEs) participation.
+social.womanInclusion,Social woman inclusion,The goal is to promote women-owned suppliers' participation.

@@ -1,6 +1,6 @@
 Code,Title,Description
-awardCriteria,Award Criteria,The strategy is to incorporate SPP-related aspects as part of the award criteria. For example, give specific weight to SPP aspects as part of the bid selection.
-contractPerformanceConditions,Contract Performance Conditions,The strategy is to incorporate SPP-related aspects as part of the contract performance conditions. For example, demand specific SPP-related tasks as part of the contract implementation.
-marginOfPreference,Margin of Preference,The strategy is to include SPP-related margins of preferences in the bid evaluation. For example, apply percentual preferences to local suppliers.
-selectionCriteria,Selection Criteria,The strategy is to include SPP-related selection criteria as part of the bidders selection. For example, to require the bidders to have a Code of Conduct in place.
-technicalSpecifications,Technical Specifications,The strategy is to incorporate SPP-related aspects into the items' technical specifications. For example, to require the product to have energy efficiency certification.
+awardCriteria,Award Criteria,"The strategy is to incorporate SPP-related aspects as part of the award criteria. For example, give specific weight to SPP aspects as part of the bid selection."
+contractPerformanceConditions,Contract Performance Conditions,"The strategy is to incorporate SPP-related aspects as part of the contract performance conditions. For example, demand specific SPP-related tasks as part of the contract implementation."
+marginOfPreference,Margin of Preference,"The strategy is to include SPP-related margins of preferences in the bid evaluation. For example, apply percentual preferences to local suppliers."
+selectionCriteria,Selection Criteria,"The strategy is to include SPP-related selection criteria as part of the bidders selection. For example, to require the bidders to have a Code of Conduct in place."
+technicalSpecifications,Technical Specifications,"The strategy is to incorporate SPP-related aspects into the items' technical specifications. For example, to require the product to have energy efficiency certification."

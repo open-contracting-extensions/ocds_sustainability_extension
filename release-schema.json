@@ -1,1 +1,76 @@
-{}
+{
+  "definitions": {
+    "Sustainability": {
+      "type": "object",
+      "title": "Sustainability",
+      "description": "The sustainability goals the contracting process incorporates and the strategies used for achieving each goal.",
+      "properties": {
+        "goal": {
+          "title": "Sustainability goal",
+          "description": "A sustainability goal that this process incorporates, from the [sustainabilityGoal]() codelist. More detailed breakdown information can be provided using the pattern [code].[subcode]. Where sub-codes are used the parent code should also be included, e.g. ['environmental', 'environmental.carbonReduction'].",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "sustainabilityGoal.csv",
+          "openCodelist": true
+        },
+        "strategies": {
+          "title": "Sustainability strategies",
+          "description": "The strategies used to achieve a sustainability goal, using the open [sustainabilityStrategies]() codelist.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "sustainabilityStrategies.csv",
+          "openCodelist": true
+        }
+      }
+    },
+    "Tender": {
+      "properties": {
+        "hasSustainability": {
+          "title": "Has sustainability?",
+          "description": "A true/false field to indicate whether the tender process incorporates Sustainable Public Procurement (SPP) aspects. The specific SPP goals and strategies used can be provided using the sustainability object.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "sustainability": {
+          "title": "Sustainability",
+          "description": "The sustainability goals and strategies this tender process incorporates.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Sustainability"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "Lot": {
+      "properties": {
+        "hasSustainability": {
+          "title": "Has sustainability?",
+          "description": "A true/false field to indicate whether the lot incorporates Sustainable Public Procurement (SPP) aspects. The specific SPP goals and strategies used can be provided using the sustainability object.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "sustainability": {
+          "title": "Sustainability",
+          "description": "The sustainability goals and strategies this lot incorporates.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Sustainability"
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

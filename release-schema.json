@@ -17,7 +17,7 @@
         },
         "strategies": {
           "title": "Sustainability strategies",
-          "description": "The strategies used to achieve a sustainability goal, using the open [sustainabilityStrategies]() codelist.",
+          "description": "The strategies used to achieve a sustainability goal, using the open [sustainabilityStrategy]() codelist.",
           "type": [
             "array",
             "null"
@@ -25,7 +25,7 @@
           "items": {
             "type": "string"
           },
-          "codelist": "sustainabilityStrategies.csv",
+          "codelist": "sustainabilityStrategy.csv",
           "openCodelist": true
         }
       }

@@ -24,13 +24,17 @@
             "null"
           ],
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "codelist": "sustainabilityStrategy.csv",
           "openCodelist": true,
-          "minLength": 1
+          "minLength": 1,
+          "minItems": 1,
+          "uniqueItems": true
         }
-      }
+      },
+      "minProperties": 1
     },
     "Tender": {
       "properties": {

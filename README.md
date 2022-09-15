@@ -1,10 +1,6 @@
 # Sustainability extension
 
-Adds a `sustainability` array and a `hasSustainability` field to the tender and lot objects to provide information related to Sustainable Public Procurement (SPP).
-
-Each `sustainability` array entry has `goal` and `strategies` fields. The strategies field accepts an array of codes from the closed `sustainabilityStrategy.csv` codelist, to indicate which strategies are used to achieve the goal. The `goal` field accepts a code from the open `sustainabilityGoal.csv` codelist, to indicate which sustainability goal the process/lot is related to.
-
-This extension uses the SPP definition from [UNEP](https://wedocs.unep.org/bitstream/handle/20.500.11822/37045/SPPWSG.pdf): “a process whereby public sector organizations meet their needs for goods, services, works and utilities in a way that achieves value for money on a whole life basis in terms of generating benefits not only to the organization, but also to society and the economy, whilst minimizing, and if possible, avoiding, damage to the environment.”
+Adds fields to the tender and lot objects, to provide information related to Sustainable Public Procurement (SPP).
 
 ## Motivation
 
@@ -17,19 +13,13 @@ To calculate SPP indicators, a user or an application needs to be able to perfor
 
 This extension add the fields needed for the above tasks as structured data.
 
-## Codelists
-
-The `sustainabilityGoal.csv` codelist is based on the list and definition used by the [OpenSPP toolkit](https://openspp.super.site/what-is-spp-and-open-spp) and the [EU’s strategic procurement codelist](https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/strategic-procurement).
-
-The `sustainabilityStrategy.csv` codelist is based on the strategies mentioned by the [OpenSPP toolkit](https://openspp.super.site/implement/set-sustainable-criteria) and the [EU’s strategic procurement codelist](https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/strategic-procurement) definition.
-
 ## Guidance
 
-If you know a process or lot is SPP related, set `hasSustainability` to `true`. 
+If you know a contracting process or lot is SPP-related, set `hasSustainability` to `true`.
 
-If you know the sustainability goals this process is pursuing, then, for each goal, add an entry in the `sustainability` array for the tender or lot, using the `sustainabilityGoal.csv` codelist.  The `sustainabilityGoal.csv` codelist contains codes for broad goals ('environmental', 'social', 'innovation', 'economic') and narrower goals (like 'environmental.wasteReduction'). It is an [open codelist](https://standard.open-contracting.org/latest/en/schema/codelists/), such that you can add new codes if no existing code is appropriate.
+If you know the sustainability goals pursued through the contracting process or lot, then, for each goal, add an entry in its `sustainability` array, from the `sustainabilityGoal.csv` codelist.  This codelist contains codes for broad goals (like 'environmental') and narrower goals (like 'environmental.wasteReduction'). It is an [open codelist](https://standard.open-contracting.org/latest/en/schema/codelists/), such that you can add new codes if no existing code is appropriate.
 
-If you also know the strategies this process will use for achieving each goal, for each goal, add an entry in the `strategies` array using the `sustainabilityStrategy.csv` codelist.
+If you know the strategies used to pursue the sustainability goal(s), then, for each goal, add an entry in the `strategies` array, from the `sustainabilityStrategy.csv` codelist.
 
 ## Examples
 
@@ -47,7 +37,7 @@ Public Health Wales adopts SPP in a contracting process to design office space a
 }
 ```
 
-If the contracting process is divided into lots, and it is known which lots relate to SPP, set the hasSustainability field to true at the lot level
+If the contracting process is divided into lots, and it is known which lot(s) relate to SPP, set the lot's `hasSustainability` field:
 
 ```json
 {
@@ -62,7 +52,7 @@ If the contracting process is divided into lots, and it is known which lots rela
 }
 ```
 
-### The goal is known
+### The sustainability goal is known
 
 Public Health Wales intends to reduce waste and CO2 emissions as part of a contracting process to design office space and supply furniture.
 
@@ -81,7 +71,7 @@ Public Health Wales intends to reduce waste and CO2 emissions as part of a contr
 }
 ```
 
-If only the broad goal is known, create a single entry using the broad code
+If only the broad goal is known, create a single entry using the broad code:
 
 ```json
 {
@@ -95,7 +85,7 @@ If only the broad goal is known, create a single entry using the broad code
 }
 ```
 
-If the `sustainabilityGoal.csv` codelist contains no appropriate code, create your own code. To create a narrower code, add a period to an existing code, followed by a camelCase word
+If the `sustainabilityGoal.csv` codelist contains no appropriate code, create your own code. To create a narrower code, add a period to an existing code, followed by a camelCase word:
 
 ```json
 {
@@ -109,9 +99,9 @@ If the `sustainabilityGoal.csv` codelist contains no appropriate code, create yo
 }
 ```
 
-### The strategy is known
+### The strategies are known
 
-Public Health Wales includes sustainability items requirements as part of a contracting process to design office space and supply furniture.
+Public Health Wales sets SPP-related technical specifications as part of a contracting process to design office space and supply furniture.
 
 ```json
 {
@@ -134,7 +124,7 @@ Public Health Wales includes sustainability items requirements as part of a cont
 }
 ```
 
-If the goal is unknown or is sustainability in general, omit goal and set strategies only
+If the goal is unknown or is sustainability in general, omit `goal` and set `strategies` only:
 
 ```json
 {
@@ -149,6 +139,16 @@ If the goal is unknown or is sustainability in general, omit goal and set strate
   }
 }
 ```
+
+## Background
+
+This extension uses the [UNEP definition](https://wedocs.unep.org/bitstream/handle/20.500.11822/37045/SPPWSG.pdf) of SPP:
+
+> A process whereby public sector organizations meet their needs for goods, services, works and utilities in a way that achieves value for money on a whole life basis in terms of generating benefits not only to the organization, but also to society and the economy, whilst minimizing, and if possible, avoiding, damage to the environment.
+
+The `sustainabilityGoal.csv` codelist is based on the goals defined in the [OpenSPP toolkit](https://openspp.super.site/what-is-spp-and-open-spp) and the [EU's strategic procurement codelist](https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/strategic-procurement).
+
+The `sustainabilityStrategy.csv` codelist is based on the strategies described in the [OpenSPP toolkit](https://openspp.super.site/implement/set-sustainable-criteria) and the [EU's strategic procurement codelist](https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/strategic-procurement).
 
 ## Issues
 

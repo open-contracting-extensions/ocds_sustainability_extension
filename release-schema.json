@@ -6,7 +6,7 @@
       "description": "The sustainability goals the contracting process incorporates and the strategies used for achieving each goal.",
       "properties": {
         "goal": {
-          "title": "Sustainability goal",
+          "title": "Goal",
           "description": "A sustainability goal that this process incorporates, from the [sustainabilityGoal]() codelist. More detailed breakdown information can be provided using the pattern [code].[subcode]. Where sub-codes are used the parent code should also be included, e.g. ['environmental', 'environmental.carbonReduction'].",
           "type": [
             "string",
@@ -17,7 +17,7 @@
           "minLength": 1
         },
         "strategies": {
-          "title": "Sustainability strategies",
+          "title": "Strategies",
           "description": "The strategies used to achieve a sustainability goal, using the open [sustainabilityStrategy]() codelist.",
           "type": [
             "array",

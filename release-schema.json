@@ -3,11 +3,11 @@
     "Sustainability": {
       "type": "object",
       "title": "Sustainability",
-      "description": "The sustainability goals the contracting process incorporates and the strategies used for achieving each goal.",
+      "description": "Information about how the contracting process or lot incorporates Sustainable Public Procurement.",
       "properties": {
         "goal": {
           "title": "Goal",
-          "description": "A sustainability goal that this process incorporates, from the [sustainabilityGoal]() codelist. More detailed breakdown information can be provided using the pattern [code].[subcode]. Where sub-codes are used the parent code should also be included, e.g. ['environmental', 'environmental.carbonReduction'].",
+          "description": "The sustainability goal pursued, from the sustainabilityGoal codelist. New sub-codes may be used outside those in the codelist, following the format [existing-code].[sub-code]. If a sub-code is used, its ancestors should be included, e.g. [\"environmental\", \"environmental.carbonReduction\"].",
           "type": [
             "string",
             "null"
@@ -18,7 +18,7 @@
         },
         "strategies": {
           "title": "Strategies",
-          "description": "The strategies used to achieve a sustainability goal, using the open [sustainabilityStrategy]() codelist.",
+          "description": "The strategies used to pursue sustainability goal(s), from the sustainabilityStrategy codelist.",
           "type": [
             "array",
             "null"

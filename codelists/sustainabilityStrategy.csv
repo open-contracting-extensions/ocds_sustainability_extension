@@ -1,6 +1,6 @@
 Code,Title,Description
-awardCriteria,Award Criteria,"The strategy is to incorporate SPP-related aspects as part of the award criteria. For example, give specific weight to SPP aspects as part of the bid selection."
-contractPerformanceConditions,Contract Performance Conditions,"The strategy is to incorporate SPP-related aspects as part of the contract performance conditions. For example, demand specific SPP-related tasks as part of the contract implementation."
-marginOfPreference,Margin of Preference,"The strategy is to include SPP-related margins of preferences in the bid evaluation. For example, apply percentual preferences to local suppliers."
-selectionCriteria,Selection Criteria,"The strategy is to include SPP-related selection criteria as part of the bidders selection. For example, to require the bidders to have a Code of Conduct in place."
-technicalSpecifications,Technical Specifications,"The strategy is to incorporate SPP-related aspects into the items' technical specifications. For example, to require the product to have energy efficiency certification."
+awardCriteria,Award criteria,"Award criteria are used to fulfill SPP goals: for example, allocating points relative to the percentage of recycled materials."
+contractPerformanceConditions,Contract performance conditions,"Contract performance conditions are used to fulfill SPP goals: for example, demanding SPP-related tasks as part of the contract's implementation."
+marginOfPreference,Margin of preference,"Margins of preference are used to fulfill SPP goals: for example, accepting the bid of a local supplier that is within a margin of the lowest bid."
+selectionCriteria,Selection criteria,"Selection criteria are used to fufill SPP goals: for example, requiring a bidder to carry a sustainability certificate."
+technicalSpecifications,Technical specifications,"Items' technical specifications are used to fulfill SPP goals: for example, requiring a product to have an energy efficiency certificate."

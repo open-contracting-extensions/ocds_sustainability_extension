@@ -7,7 +7,7 @@
       "properties": {
         "goal": {
           "title": "Goal",
-          "description": "The sustainability goal pursued, from the sustainabilityGoal codelist. New sub-codes may be used outside those in the codelist, following the format [existing-code].[sub-code]. If a sub-code is used, its ancestors should be included, e.g. [\"environmental\", \"environmental.carbonReduction\"].",
+          "description": "The sustainability goal pursued, from the sustainabilityGoal codelist. New sub-codes may be used outside those in the codelist, following the format [existing-code].[sub-code].",
           "type": [
             "string",
             "null"
@@ -18,7 +18,7 @@
         },
         "strategies": {
           "title": "Strategies",
-          "description": "The strategies used to pursue sustainability goal(s), from the sustainabilityStrategy codelist.",
+          "description": "The strategies used to pursue the sustainability goal(s), from the sustainabilityStrategy codelist.",
           "type": [
             "array",
             "null"

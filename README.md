@@ -1,14 +1,15 @@
 # Sustainability extension
 
-Adds a `sustainability` array and a `hasSustainability` field to the tender and lot levels to identify if this process is related to Sustainable Public Procurement (SPP).
+Adds a `sustainability` array and a `hasSustainability` field to the tender and lot objects to provide information related to Sustainable Public Procurement (SPP).
 
-Each `sustainability` array entry has `goal` and `strategies` fields. The strategies field accepts an array of codes from the closed `sustainabilityStrategy` codelist, to indicate which strategies are used to achieve the goal. The `goal` field accepts a code from the open `sustainabilityGoal` codelist, to indicate which sustainability goal the process/lot is related to.
+Each `sustainability` array entry has `goal` and `strategies` fields. The strategies field accepts an array of codes from the closed `sustainabilityStrategy.csv` codelist, to indicate which strategies are used to achieve the goal. The `goal` field accepts a code from the open `sustainabilityGoal.csv` codelist, to indicate which sustainability goal the process/lot is related to.
 
 This extension uses the SPP definition from [UNEP](https://wedocs.unep.org/bitstream/handle/20.500.11822/37045/SPPWSG.pdf): “a process whereby public sector organizations meet their needs for goods, services, works and utilities in a way that achieves value for money on a whole life basis in terms of generating benefits not only to the organization, but also to society and the economy, whilst minimizing, and if possible, avoiding, damage to the environment.”
 
 ## Motivation
 
 To calculate SPP indicators, a user or an application needs to be able to perform the following tasks, using OCDS data:
+
 - Select the contracting processes or individual lots that relate to SPP.
 - Select the contracting processes or individual lots that relate to a specific sustainability goal.
 - Determine which strategies are being used to promote a sustainability goal, within a contracting process or lot.
@@ -17,6 +18,7 @@ To calculate SPP indicators, a user or an application needs to be able to perfor
 This extension add the fields needed for the above tasks as structured data.
 
 ## Codelists
+
 The `sustainabilityGoal.csv` codelist is based on the list and definition used by the [OpenSPP toolkit](https://openspp.super.site/what-is-spp-and-open-spp) and the [EU’s strategic procurement codelist](https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/strategic-procurement).
 
 The `sustainabilityStrategy.csv` codelist is based on the strategies mentioned by the [OpenSPP toolkit](https://openspp.super.site/implement/set-sustainable-criteria) and the [EU’s strategic procurement codelist](https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/strategic-procurement) definition.
@@ -27,7 +29,7 @@ If you know a process or lot is SPP related, set `hasSustainability` to `true`.
 
 If you know the sustainability goals this process is pursuing, then, for each goal, add an entry in the `sustainability` array for the tender or lot, using the `sustainabilityGoal` codelist.  The `sustainabilityGoal` codelist contains codes for broad goals ('environmental', 'social', 'innovation', 'economic') and narrower goals (like 'environmental.wasteReduction'). It is an [open codelist](https://standard.open-contracting.org/latest/en/schema/codelists/), such that you can add new codes if no existing code is appropriate.
 
-If you also know the strategies this process will use for achieving each goal, for each goal, add an entry in the `strategies` array using the `sustainabilityStrategies` codelist.
+If you also know the strategies this process will use for achieving each goal, for each goal, add an entry in the `strategies` array using the `sustainabilityStrategy.csv` codelist.
 
 ## Examples
 
@@ -147,7 +149,6 @@ If the goal is unknown or is sustainability in general, omit goal and set strate
   }
 }
 ```
-
 
 ## Issues
 

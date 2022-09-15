@@ -39,8 +39,8 @@
     "Tender": {
       "properties": {
         "hasSustainability": {
-          "title": "Has sustainability?",
-          "description": "A true/false field to indicate whether the tender process incorporates Sustainable Public Procurement (SPP) aspects. The specific SPP goals and strategies used can be provided using the sustainability object.",
+          "title": "Has sustainability",
+          "description": "Whether the contracting process incorporates Sustainable Public Procurement.",
           "type": [
             "boolean",
             "null"
@@ -48,7 +48,7 @@
         },
         "sustainability": {
           "title": "Sustainability",
-          "description": "The sustainability goals and strategies this tender process incorporates.",
+          "description": "Information about how the contracting process incorporates Sustainable Public Procurement.",
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
@@ -62,8 +62,8 @@
     "Lot": {
       "properties": {
         "hasSustainability": {
-          "title": "Has sustainability?",
-          "description": "A true/false field to indicate whether the lot incorporates Sustainable Public Procurement (SPP) aspects. The specific SPP goals and strategies used can be provided using the sustainability object.",
+          "title": "Has sustainability",
+          "description": "Whether the lot incorporates Sustainable Public Procurement.",
           "type": [
             "boolean",
             "null"
@@ -71,7 +71,7 @@
         },
         "sustainability": {
           "title": "Sustainability",
-          "description": "The sustainability goals and strategies this lot incorporates.",
+          "description": "Information about how the lot incorporates Sustainable Public Procurement.",
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,

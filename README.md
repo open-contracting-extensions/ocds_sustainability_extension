@@ -27,7 +27,7 @@ The `sustainabilityStrategy.csv` codelist is based on the strategies mentioned b
 
 If you know a process or lot is SPP related, set `hasSustainability` to `true`. 
 
-If you know the sustainability goals this process is pursuing, then, for each goal, add an entry in the `sustainability` array for the tender or lot, using the `sustainabilityGoal` codelist.  The `sustainabilityGoal` codelist contains codes for broad goals ('environmental', 'social', 'innovation', 'economic') and narrower goals (like 'environmental.wasteReduction'). It is an [open codelist](https://standard.open-contracting.org/latest/en/schema/codelists/), such that you can add new codes if no existing code is appropriate.
+If you know the sustainability goals this process is pursuing, then, for each goal, add an entry in the `sustainability` array for the tender or lot, using the `sustainabilityGoal.csv` codelist.  The `sustainabilityGoal.csv` codelist contains codes for broad goals ('environmental', 'social', 'innovation', 'economic') and narrower goals (like 'environmental.wasteReduction'). It is an [open codelist](https://standard.open-contracting.org/latest/en/schema/codelists/), such that you can add new codes if no existing code is appropriate.
 
 If you also know the strategies this process will use for achieving each goal, for each goal, add an entry in the `strategies` array using the `sustainabilityStrategy.csv` codelist.
 
@@ -42,7 +42,7 @@ Public Health Wales adopts SPP in a contracting process to design office space a
   "tender": {
     "id": "P427",
     "title": "Design of office space and supply of furniture, reusing existing furniture",
-    "hasSustainability": true,
+    "hasSustainability": true
   }
 }
 ```
@@ -95,7 +95,7 @@ If only the broad goal is known, create a single entry using the broad code
 }
 ```
 
-If the sustainabilityGoal codelist contains no appropriate code, create your own code. To create a narrower code, add a period to an existing code, followed by a camelCase word
+If the `sustainabilityGoal.csv` codelist contains no appropriate code, create your own code. To create a narrower code, add a period to an existing code, followed by a camelCase word
 
 ```json
 {

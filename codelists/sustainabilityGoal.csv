@@ -2,7 +2,7 @@ Code,Title,Description
 economic,Economic,"The goal is economic, such as formal employment and the local economy."
 economic.formalEmploymentPromotion,Formal employment promotion,The goal is to promote formal employment.
 economic.localEconomyPromotion,Local economy promotion,The goal is to promote the local economy.
-economic.marketInnovationPromotion,Market innovation promotion,The goal is to promote the market innovation.
+economic.marketInnovationPromotion,Market innovation promotion,The goal is to promote market innovation.
 environmental,Environmental,"The goal is to minimize and, if possible, avoid environmental damage: for example, reducing CO2 emissions and waste or promoting resource reuse and energy efficiency."
 environmental.carbonEmissionsReduction,Carbon emissions reduction,The goal is to reduce carbon dioxide (CO2) emissions.
 environmental.energyEfficiency,Energy efficiency,The goal is to promote energy efficiency.

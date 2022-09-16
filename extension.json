@@ -6,7 +6,7 @@
     "en": "Adds fields to the tender and lot objects, to provide information related to Sustainable Public Procurement."
   },
   "documentationUrl": {
-    "en": "https://github.com/open-contracting-extensions/ocds_sustainability_extension"
+    "en": "https://extensions.open-contracting.org/en/extensions/sustainability"
   },
   "schemas": [
     "release-schema.json"

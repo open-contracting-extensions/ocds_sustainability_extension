@@ -154,4 +154,4 @@ The `sustainabilityStrategy.csv` codelist is based on the strategies described i
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
-This extension was originally discussed in https://github.com/open-contracting/standard/issues/1543
+This extension was originally discussed in [https://github.com/open-contracting/standard/issues/1543](https://github.com/open-contracting/standard/issues/1543)

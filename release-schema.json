@@ -5,6 +5,15 @@
       "title": "Sustainability",
       "description": "Information about how the contracting process or lot incorporates Sustainable Public Procurement.",
       "properties": {
+        "description": {
+          "title": "Description",
+          "description": "A description of how this contracting process or lot incorporates Sustainable Public Procurement. Structured information should be provided in `.goal` and `.strategies`.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
         "goal": {
           "title": "Goal",
           "description": "The sustainability goal pursued, from the sustainabilityGoal codelist. New sub-codes may be used outside those in the codelist, following the format [existing-code].[sub-code].",

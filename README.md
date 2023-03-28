@@ -2,6 +2,10 @@
 
 Adds fields to the tender and lot objects, to provide information related to Sustainable Public Procurement (SPP).
 
+## Legal context
+
+In the European Union, this extension's fields correspond to [eForms BT-777-Lot (Strategic Procurement Description)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). For correspondences to eForms fields, see [OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/).
+
 ## Motivation
 
 To calculate SPP indicators, a user or an application needs to be able to perform the following tasks, using OCDS data:
@@ -99,6 +103,20 @@ If the `sustainabilityGoal.csv` codelist contains no appropriate code, create yo
 }
 ```
 
+If there is a free-text description of the sustainability goal:
+
+```json
+{
+  "tender": {
+    "sustainability": [
+      {
+        "description": "This procurement procedure is aimed at reducing the environmental impact of Public Health Wales office space and furniture."
+      }
+    ]
+  }
+}
+```
+
 ### The strategies are known
 
 Public Health Wales sets SPP-related technical specifications as part of a contracting process to design office space and supply furniture.
@@ -155,3 +173,9 @@ The `sustainabilityStrategy.csv` codelist is based on the strategies described i
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
 This extension was originally discussed in <https://github.com/open-contracting/standard/issues/1543>.
+
+## Changelog
+
+### Unreleased
+
+* Add `Sustainability.description` field.

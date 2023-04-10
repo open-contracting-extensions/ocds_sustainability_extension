@@ -4,7 +4,7 @@ Adds fields to the tender and lot objects, to provide information related to Sus
 
 ## Legal context
 
-In the European Union, this extension's fields correspond to [eForms BT-777-Lot (Strategic Procurement Description)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). For correspondences to eForms fields, see [OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/).
+In the European Union, this extension's fields correspond to [eForms BT-06-Lot (Strategic Procurement), BT-774-Lot (Green Procurement), BT-775-Lot (Social Procurement), BT-776-Lot (Procurement of Innovation), BT-777-Lot (Strategic Procurement Description), BT-805-Lot (Green Procurement Criteria)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). For correspondences to eForms fields, see [OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/).
 
 ## Motivation
 

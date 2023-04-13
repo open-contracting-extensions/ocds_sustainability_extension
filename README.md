@@ -2,10 +2,6 @@
 
 Adds fields to the tender and lot objects, to provide information related to Sustainable Public Procurement (SPP).
 
-## Legal context
-
-In the European Union, this extension's fields correspond to [eForms BT-06-Lot (Strategic Procurement), BT-774-Lot (Green Procurement), BT-775-Lot (Social Procurement), BT-776-Lot (Procurement of Innovation), BT-777-Lot (Strategic Procurement Description), BT-805-Lot (Green Procurement Criteria)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). For correspondences to eForms fields, see [OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/).
-
 ## Motivation
 
 To calculate SPP indicators, a user or an application needs to be able to perform the following tasks, using OCDS data:
@@ -176,26 +172,26 @@ This extension was originally discussed in <https://github.com/open-contracting/
 
 ## Changelog
 
-### Unreleased
+### 2023-04-12
 
 * Add `Sustainability.description` field.
 * Add codes to `sustainabilityGoal.csv`:
-  * economic.innovativePurchase
-  * economic.processInnovation
-  * economic.productInnovation
-  * economic.researchDevelopmentActivities
-  * environmental.biodiversityProtectionRestoration
-  * environmental.circularEconomy
-  * environmental.circularEconomy
-  * environmental.climateChangeMitigation
-  * environmental.pollutionPrevention
-  * environmental.waterResources
-  * social.accessibility
-  * social.disadvantagedEmploymentOpportunities
-  * social.ethnicEquality
-  * social.genderEquality
-  * social.humanRightsInSupplyChain
+  * 'economic.innovativePurchase'
+  * 'economic.processInnovation'
+  * 'economic.productInnovation'
+  * 'economic.researchDevelopmentActivities'
+  * 'environmental.biodiversityProtectionRestoration'
+  * 'environmental.circularEconomy'
+  * 'environmental.circularEconomy'
+  * 'environmental.climateChangeMitigation'
+  * 'environmental.pollutionPrevention'
+  * 'environmental.waterResources'
+  * 'social.accessibility'
+  * 'social.disadvantagedEmploymentOpportunities'
+  * 'social.ethnicEquality'
+  * 'social.genderEquality'
+  * 'social.humanRightsInSupplyChain'
 * Add codes to `sustainabilityStrategy.csv`:
-  * euGPPCriteria
-  * nationalGPPCriteria
-  * otherGPPCriteria
+  * 'euGPPCriteria'
+  * 'nationalGPPCriteria'
+  * 'otherGPPCriteria'

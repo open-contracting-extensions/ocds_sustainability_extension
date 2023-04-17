@@ -7,7 +7,7 @@
       "properties": {
         "description": {
           "title": "Description",
-          "description": "A description of how this contracting process or lot incorporates Sustainable Public Procurement. Structured information should be provided in `.goal` and `.strategies`.",
+          "description": "A description of how the contracting process or lot incorporates Sustainable Public Procurement.",
           "type": [
             "string",
             "null"

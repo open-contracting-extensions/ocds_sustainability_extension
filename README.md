@@ -99,6 +99,20 @@ If the `sustainabilityGoal.csv` codelist contains no appropriate code, create yo
 }
 ```
 
+If there is a free-text description of the sustainability goal:
+
+```json
+{
+  "tender": {
+    "sustainability": [
+      {
+        "description": "This procurement procedure is aimed at reducing the environmental impact of Public Health Wales office space and furniture."
+      }
+    ]
+  }
+}
+```
+
 ### The strategies are known
 
 Public Health Wales sets SPP-related technical specifications as part of a contracting process to design office space and supply furniture.
@@ -155,3 +169,29 @@ The `sustainabilityStrategy.csv` codelist is based on the strategies described i
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
 This extension was originally discussed in <https://github.com/open-contracting/standard/issues/1543>.
+
+## Changelog
+
+### 2023-04-12
+
+* Add `Sustainability.description` field.
+* Add codes to `sustainabilityGoal.csv`:
+  * 'economic.innovativePurchase'
+  * 'economic.processInnovationPromotion'
+  * 'economic.productInnovationPromotion'
+  * 'economic.researchDevelopmentActivities'
+  * 'environmental.biodiversityProtectionRestoration'
+  * 'environmental.circularEconomy'
+  * 'environmental.circularEconomy'
+  * 'environmental.climateChangeMitigation'
+  * 'environmental.pollutionPrevention'
+  * 'environmental.waterResourcesProtection'
+  * 'social.accessibility'
+  * 'social.disadvantagedEmploymentOpportunities'
+  * 'social.ethnicEquality'
+  * 'social.genderEquality'
+  * 'social.humanRightsInSupplyChains'
+* Add codes to `sustainabilityStrategy.csv`:
+  * 'euGPPCriteria'
+  * 'nationalGPPCriteria'
+  * 'otherGPPCriteria'

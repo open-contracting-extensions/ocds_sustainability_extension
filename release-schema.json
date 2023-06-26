@@ -1,9 +1,9 @@
 {
   "definitions": {
     "Sustainability": {
-      "type": "object",
       "title": "Sustainability",
       "description": "Information about how the contracting process or lot incorporates Sustainable Public Procurement.",
+      "type": "object",
       "properties": {
         "description": {
           "title": "Description",

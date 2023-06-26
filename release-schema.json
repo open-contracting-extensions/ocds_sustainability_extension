@@ -59,12 +59,12 @@
           "title": "Sustainability",
           "description": "Information about how the contracting process incorporates Sustainable Public Procurement.",
           "type": "array",
-          "minItems": 1,
-          "uniqueItems": true,
-          "wholeListMerge": true,
           "items": {
             "$ref": "#/definitions/Sustainability"
-          }
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
         }
       }
     },
@@ -82,12 +82,12 @@
           "title": "Sustainability",
           "description": "Information about how the lot incorporates Sustainable Public Procurement.",
           "type": "array",
-          "minItems": 1,
-          "uniqueItems": true,
-          "wholeListMerge": true,
           "items": {
             "$ref": "#/definitions/Sustainability"
-          }
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
         }
       }
     }

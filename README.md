@@ -99,7 +99,7 @@ If the `sustainabilityGoal.csv` codelist contains no appropriate code, create yo
 }
 ```
 
-If there is a free-text description of the sustainability goal:
+If there is a description of the sustainability goal:
 
 ```json
 {

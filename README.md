@@ -175,7 +175,7 @@ This extension was originally discussed in <https://github.com/open-contracting/
 ### 2023-04-12
 
 * Add `Sustainability.description` field.
-* Add codes to `sustainabilityGoal.csv`:
+* Add codes to the `sustainabilityGoal.csv` codelist:
   * 'economic.innovativePurchase'
   * 'economic.processInnovationPromotion'
   * 'economic.productInnovationPromotion'
@@ -191,7 +191,7 @@ This extension was originally discussed in <https://github.com/open-contracting/
   * 'social.ethnicEquality'
   * 'social.genderEquality'
   * 'social.humanRightsInSupplyChains'
-* Add codes to `sustainabilityStrategy.csv`:
+* Add codes to the `sustainabilityStrategy.csv` codelist:
   * 'euGPPCriteria'
   * 'nationalGPPCriteria'
   * 'otherGPPCriteria'
